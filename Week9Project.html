@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>           <!--Header Section with linked style sheets-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="styleshett" href="styles.css">
+</head>
+<body class="container-fluid bg-info"> <!--body with container fluid and background color-->
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> <!--Navbar with expand set to sm size with dark background color-->
+        <a class="navbar-brand" href="Week9Project.html"> <!--brand navbar that links to main page-->
+            <img src="Assets/Controller.jpg" width="144" height="86"> <!--navbar "logo" image-->
+            <span class="navbar-text h4">Which game should I buy?</span> <!--navbar text-->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controle="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!--nav bar expand hamburger button with dropdown menu targeting navbarNavDropdown class-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown"> <!--collapsible part of nav menu with list items-->
+            <ul class="navbar-nav"> <!--unordered list of navbar elements-->
+                <li class="nav-item active"> <!--first list nav item set to active-->
+                    <a class="nav-link" href="Week9Project.html">Home</a> <!--Home link linking to main page-->
+                </li>
+                <li class="nav-item dropdown"> <!--dropdown nav element-->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
+                        <!--dropdown menu anchor button with id-->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <!--dropdown menu div targeting proper ID-->
+                            <a class="dropdown-item" href="#card1">Baldur's Gate 3</a> <!--Three different dropdown anchors each linking to the correct card ID-->
+                            <a class="dropdown-item" href="#card2">Starfield</a>
+                            <a class="dropdown-item" href="#card3">Cyberpunk 2077</a>
+                        </div>
+                </li>
+                <li class="nav-item"> <!--vote anchor linking to vote form-->
+                    <a class="nav-link" href="#vote1">Vote</a>
+                </li>
+                <li class="nav-item"><!--contact us anchor linking to second page-->
+                    <a class="nav-link" href="ContactUs.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container justify-content-center"> <!--bootstrap container with centered content-->
+            <div class="col-md-12 text-center mt-4 mb-4"> <!--setting columns, centering text, adding margins to top and bottom-->
+                <h3>Help me decide which game I should purchase and do a 100% playthrough of Next!</h3>
+                <p>Below are cards for three different RPG games I am considering playing.  All three are open world role playing games but have very different settings and playstyles.  
+                If you do not have a strong opinion on any of the games there is a table below the cards to help compare them.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container"> <!--Bootstrap container-->
+        <div class="row"> <!--Grid row for horizontal layout-->
+            <div class="col-lg-4 col-md-6 col-sm-12"> <!--setting grid columns for different screen sizes-->
+                <div class="card h-100 d-flex flex-column"> <!--bootstrap card class with 100% height with vertical flex-->
+                    <div class="card-body flex-grow-1"> <!--allowing card body to fill avialable vertical space-->
+                        <div class="card" id="card1"> <!--card class with id to target with links-->
+                            <img class="card-img-top img-fluid" src="Assets/Baldur's Gate 3.jpg" alt="BG3 image cap"> <!--card class image-->
+                            <div class="card-body"> <!--card body div-->
+                                <h5 class="card-title">Baldur's Gate 3</h5> <!--Card title followed by card text-->
+                                <p class="card-text">Baldur's Gate 3 is an isometric, high fantasy RPG develped by Larian Studios and is based on the Dungeon's and Dragons ruleset.</p>
+                                <a href="#vote1" class="btn btn-primary">Vote</a> <!--card button that links to vote form-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12"> <!--second card, see first card comments-->
+                <div class="card h-100 d-flex flex-column">
+                    <div class="card-body flex-grow-1">
+                        <div class="card" id="card2">
+                            <img class="card-img-top img-fluid" src="Assets/Starfield.jpg" alt="Starfield image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Starfield</h5>
+                                <p class="card-text">Starfield is an open world space themed RPG develped by Bethesda Softworks that includes both in person and spaceship combat.</p>
+                                <a href="#vote1" class="btn btn-primary">Vote</a>
+                            </div>
+                        </div>
+                    </div>   
+                </div>        
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12"> <!--third card, see first card comments-->
+                <div class="card h-100 d-flex flex-column">
+                    <div class="card-body flex-grow-1">
+                        <div class="card" id="card3">
+                            <img class="card-img-top img-fluid" src="Assets/Cyberpunk 2077 alt.jpg" alt="Cyberpunk image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Cyberpunk 2077</h5>
+                                <p class="card-text">Cyberpunk 2077 is an open world RPG developed by CD Project Red set in a dystopian near future based on the original 1988 table top game.</p>
+                                <a href="#vote1" class="btn btn-primary">Vote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>    
+    </section>
+
+    <section class="container-xl"> <!--Bootstrap container set to xl size-->
+        <table class="table table-bordered table-dark mt-4 mb-4" id="gamesTable"> <!--bootstrap table with dark color, top and bottom margins, and targetable ID-->
+            <thead> <!--table head-->
+                <tr> <!--table head rows-->
+                    <th scope="col"> </th> <!--first header, blank with column scope-->
+                    <th scope="col">Baldur's Gate 3</th> <!--second header with column scope and game name-->
+                    <th scope="col">Starfield</th> <!--third header-->
+                    <th scope="col">Cyberpunk 2077</th> <!--fourth header-->
+                </tr>
+            </thead>
+            <tbody> <!--table body-->
+                <tr>
+                    <th scope="row">Average Review Score</th> <!--first header in body with row scope-->
+                    <td>96</td> <!--three table data-->
+                    <td>84</td>
+                    <td>86</td>
+                </tr>
+                <tr>
+                    <th scope="row">Price on Steam</th> <!--second body header with row scope-->
+                    <td>$59.99</td> <!--three table data-->
+                    <td>$69.99</td>
+                    <td>$59.99</td>
+                </tr>
+                <tr>
+                    <th scope="row">Hours to 100% complete</th> <!--third body header with row scope-->
+                    <td>100 hours</td> <!--three table data-->
+                    <td>140 hours</td>
+                    <td>103 hours</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cost per hour</th> <!--fourth body header with row scope-->
+                    <td>$0.59</td><!--three table data-->
+                    <td>$0.49</td>
+                    <td>$0.58</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <div class="container justify-content-center"> <!--Container for H3 text justified to center and text to center with 12 column-->
+            <div class="col-md-12 text-center">
+                <h3>Vote Below!</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-xl"> <!--Bootstrap container set to Xl-->
+        <form class="border border-dark p-4" id="vote1"> <!--Form class with dark border, padding, and targetable Id -->
+            <div class="form-group row"> <!--grouping form elements in a row-->
+                <label for="name1" class="col-sm-1 col-form-label">Name:</label> <!--name label with column set to 1-->
+                <div class="col-sm-6"> 
+                    <input type="name" class="form-control" id="name1" placeholder="Name"> <!--form input for name with col set to 6 and placeholder and id-->
+                </div>
+            </div>
+            <fieldset class="form-group"> <!--Grouping related radio buttons together-->
+                <div class="row"> <!--bootstrap grid row-->
+                    <legend class="col-form-label col-sm-1 pt-0">Games:</legend> <!--label for group of radio buttons with column set to 1 and zero top padding-->
+                    <div class="col-sm-10"> <!--10 column width on small screens-->
+                        <div class="form-check"> <!--checkbox style inputs for option 1-->
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"> <!--input class set to radio buttons with name, id, value-->
+                            <label class="form-check-label" for="gridRadios1"> <!--form check label for when option is selected-->
+                                Baldur's Gate 3
+                            </label>
+                        </div>
+                        <div class="form-check"> <!--Option two, see option one notes-->
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                Starfield
+                            </label>
+                        </div>
+                        <div class="form-check"> <!--option three, see option one notes-->
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                            <label class="form-check-label" for="gridRadios3">
+                                Cyberpunk 2077
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button> <!--Submit button to submit selected option-->
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <hr><!--thematic break before footer section-->
+    <footer><!--footer element-->
+        <p>&copy; 2023</p> <!--footer paragraph with copywrite symbol and year-->
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+
+    <!--Below is a script I found that uses jQuery to smooth scroll to certain elements when links are clicked-->
+    <script>
+        $(document).ready(function () {
+            $("a.nav-link").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

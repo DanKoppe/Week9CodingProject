@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                     <!--Header Section with linked style sheets-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="styleshett" href="styles.css">
+</head>
+<body class="container-fluid bg-info">  <!--body with container fluid and background color-->
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> <!--Same navbar as main page, see main page for comments-->
+        <a class="navbar-brand" href="Week9Project.html">
+            <img src="Assets/Controller.jpg" width="144" height="86">
+            <span class="navbar-text h4">Which game should I buy?</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controle="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Week9Project.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Week9Project.html#card1">Baldur's Gate 3</a>
+                            <a class="dropdown-item" href="Week9Project.html#card2">Starfield</a>
+                            <a class="dropdown-item" href="Week9Project.html#card3">Cyberpunk 2077</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Week9Project.html">Vote</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ContactUs.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-lg"> <!--Bootstrap container for contact us content set to large-->
+        <H1 class="justify-content-center text-center">Contact Us</H1> <!--H1 title header for Contact us page-->
+        <h3 class="justify-content-center text-center">If you would like to suggest games for the next voting session or have any general question please send an email to the link below.</h3>
+        <div class="justify-content-center text-center"> <!--centering email link-->
+            <a href="mailto:Dan.Koppe65@gmail.com" class="text-danger">Dan.Koppe65@gmail.com</a><br><br> <!--a element with href with mailto: to automatically open up prefered email program when clicked-->
+            <img src="Assets/Contact us.jpg" alt="contactImage" class="img-fluid"> <!--Contact us page image-->
+        </div>        
+    </div>
+
+    <hr><!--thematic break before footer section-->
+    <footer><!--footer element-->
+        <p>&copy; 2023</p> <!--footer paragraph with copywrite symbol and year-->
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!--Below is a script I found that uses jQuery to smooth scroll to certain elements when links are clicked-->
+    <script>
+        $(document).ready(function () {
+            $("a.nav-link").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
